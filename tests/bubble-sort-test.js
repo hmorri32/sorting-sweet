@@ -6,18 +6,16 @@ describe('TDD with bubbles', () => {
     expect(Array.isArray(bubbleSort3([], 'hello'))).to.be.true
   })
 
-  it('should bubble sort and return ordered array items', () => {
-    let bubbler = bubbleSort3([1, 4, 3, 2, 7])
-
-    expect(bubbler).to.deep.equal([1, 2, 3, 4, 7])
+  it('should throw an error if the function does not receive an array', () => {
+    expect( () => bubbleSort3('yo')).to.throw('error')
   })
 
+  it('should bubble sort and return ordered array items', () => {
+    let bubbler = bubbleSort3([1, 4, 3, 2, 7])
+    // console.log(bubbler)
+    expect(bubbler).to.deep.equal([1, 2, 3, 4, 7])
+  })
 })
 
-
-
-const arrayOfNumbers = [8,6,7,5,3,0,9]
-
-arrayOfNumbers.sort((a,b) => {return a - b})
 
 console.log('suh')

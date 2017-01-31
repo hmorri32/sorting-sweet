@@ -43,16 +43,19 @@ function swapStuff(items, first, second){
   items[second] = tank;
 }
 
-function bubbleSort3(items){
-  let length = items.length;
+function bubbleSort3(array){
+  if(!Array.isArray(array)){
+    throw new Error('error')
+  }
+  let length = array.length;
   for (let i = 0; i < length; i++){
     for (let j = 0; j < length; j++){
-      if (items[j] > items[j + 1]){
-        swapStuff(items, j, j + 1);
-        console.log(items)
+      if (array[j] > array[j + 1]){
+        swapStuff(array, j, j + 1);
+        console.log(array)
       }
     }
-  } return items
+  } return array
 }
 
 // bubbleSort3([10,1,3,2,11,6,4,5,8,9,])
