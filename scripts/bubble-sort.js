@@ -38,17 +38,17 @@ bubbleSort([4, 1, 5, 3, 2, 8, 25, 11, 100, 10])
 
 ///  Take three
 
-function swap(items, firstIndex, secondIndex){
-    var temp = items[firstIndex];
-    items[firstIndex] = items[secondIndex];
-    items[secondIndex] = temp;
+function swap(items, first, second){
+    var temp = items[first];
+    items[first] = items[second];
+    items[second] = temp;
 }
 
 function bubbleSort(items){
     var len = items.length,
         i, j, stop;
     for (i = 0; i < len; i++){
-        for (j = 0, stop = len - i; j < stop; j++){
+        for (j = 0; j < len; j++){
             if (items[j] > items[j + 1]){
                 swap(items, j, j + 1);
                 console.log(items)
