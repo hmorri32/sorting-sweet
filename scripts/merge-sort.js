@@ -30,13 +30,17 @@ function divideAndConquer(left, right){
     const elementA = left[leftIndex];
     const elementB = right[rightIndex];
 
-    // push the smaller value to the finished array
+    // push the first (shift) of the smaller value to the finished array
     if(elementA < elementB){
       finished.push(left.shift());
     } else {
       finished.push(right.shift());
     }
-  }   return finished.concat(left.slice()).concat(right.slice());
+  }
+  // Return the finished producted (in this case, the smallest number)
+  // then concatenate it with the left (sorted)
+  // then concatenate the right (sorted) array
+  return finished.concat(left.slice()).concat(right.slice());
 }
 
 // console.log(mergeStuff(a))
