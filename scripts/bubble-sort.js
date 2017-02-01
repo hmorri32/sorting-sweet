@@ -40,4 +40,4 @@ function bubbleSort3(array){
 // bubbleSort3([10,1,3,2,11,6,4,5,8,9,])
 
 
-module.exports =  bubbleSort3
+export default bubbleSort3

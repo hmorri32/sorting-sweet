@@ -1,13 +1,13 @@
 function insertionSort(stuff) {
-  if(stuff.length < 1){
+  const length = stuff.length;
+
+  if(length < 1){
     throw new Error('error')
   }
 
   if(!Array.isArray(stuff)){
     throw new Error('error')
   }
-
-  const length = stuff.length;
 
   for(let i = 1; i < length; i++) {
     const tank = stuff[i];
@@ -23,4 +23,4 @@ function insertionSort(stuff) {
 // insertionSort([9, 20, 33, 15, 4, 7, 16, 2]);
 
 
-module.exports = insertionSort
+export default insertionSort;
