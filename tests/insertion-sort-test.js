@@ -22,6 +22,12 @@ describe('TDD with insertion sort', () => {
     console.log(insertDis)
   })
 
+  it('should use insertion sort to sort some strings', () => {
+    let insertDis = insertionSort(['d', 'b', 'c', 'a', 'm', 'g', 'i'])
+
+    expect(insertDis).to.deep.equal(['a', 'b', 'c', 'd', 'g', 'i', 'm'])
+  })
+
   //
   // it('should bubble sort numbers and return and ordered array', () => {
   //   let bubbler = bubbleSort3([1, 4, 3, 2, 7])
