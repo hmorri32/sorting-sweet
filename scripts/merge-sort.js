@@ -1,4 +1,4 @@
-var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
+const a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
 
 function mergeStuff(stuff){
   // Find the length of the array
@@ -8,27 +8,27 @@ function mergeStuff(stuff){
     return stuff;
   }
   // split the array in half.
-  var halfStuff  = Math.floor(length/2);
+  const halfStuff  = Math.floor(length/2);
   // make a new array from the beginning of the array to the half
-  var left  = stuff.slice(0, halfStuff);
+  const left       = stuff.slice(0, halfStuff);
   // make a new array from the right half
-  var right = stuff.slice(halfStuff);
+  const right      = stuff.slice(halfStuff);
   // recursion yo. continue to split and split.
   return divideAndConquer(mergeStuff(left), mergeStuff(right));
 }
 
 function divideAndConquer(left, right){
   // Create empty finished array to push stuff to later
-  var finished = [];
+  const finished   = [];
   // keep track of index values
-  var leftIndex = 0;
-  var rightIndex = 0;
+  const leftIndex  = 0;
+  const rightIndex = 0;
 
   // while indexes are smaller than their length
   while(leftIndex < left.length && rightIndex < right.length){
     // current elements
-    var elementA = left[leftIndex];
-    var elementB = right[rightIndex];
+    const elementA = left[leftIndex];
+    const elementB = right[rightIndex];
 
     // push the smaller value to the finished array
     if(elementA < elementB){
@@ -39,4 +39,4 @@ function divideAndConquer(left, right){
   }   return finished.concat(left.slice()).concat(right.slice());
 }
 
-console.log(mergeStuff(a))
+// console.log(mergeStuff(a))
