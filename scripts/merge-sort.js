@@ -38,9 +38,9 @@ function divideAndConquer(left, right){
     }
   }
   // Return the finished producted (in this case, the smallest number)
-  // then concatenate it with the left (sorted)
-  // then concatenate the right (sorted) array
-  return finished.concat(left.slice()).concat(right.slice());
+  // Then concatenate it with the left (sorted)
+  // Then concatenate the right (sorted) array
+  return finished.concat(left).concat(right);
 }
 
 // console.log(mergeStuff(a))

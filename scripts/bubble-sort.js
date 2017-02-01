@@ -1,7 +1,6 @@
 
 //  Take two.
 
-
 const bubbleSort = array => {
   // Two for loops. dále.
   for (let i = 0; i < array.length; i++){
@@ -35,8 +34,10 @@ function bubbleSort3(array){
     throw new Error('error')
   }
   let length = array.length;
+  // Loop through these puppies. utah, gimme 2.
   for (let i = 0; i < length; i++){
     for (let j = 0; j < length; j++){
+      // If the stuff is bigger than the other stuff, switch em. 
       if (array[j] > array[j + 1]){
         swapStuff(array, j, j + 1);
         console.log(array)

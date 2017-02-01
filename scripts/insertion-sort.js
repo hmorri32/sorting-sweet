@@ -19,7 +19,7 @@ function insertionSort(stuff) {
     // Loop through the stuff from i - 1 (j)
     for(var j = (i - 1); j >= 0 && stuff[j] > tank; j--) {
       // if the stuff at j + 1 is bigger than the stuff at J, switch em.
-      stuff[j+1] = stuff[j];
+      stuff[j + 1] = stuff[j];
     }
     // Overwrite j+1 with tank value
     stuff[j + 1] = tank;
