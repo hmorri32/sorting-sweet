@@ -22,7 +22,7 @@ const bubbleSort = array => {
 ///  Take three
 // Make helper function for that swapswap
 function swapStuff(items, first, second){
-  // temporary variable. holding tank. hold the value while altering the other
+  // temporary variable. holding tank. hold the value as it will change later
   let tank = items[first];
   items[first] = items[second];
   items[second] = tank;
@@ -37,7 +37,7 @@ function bubbleSort3(array){
   // Loop through these puppies. utah, gimme 2.
   for (let i = 0; i < length; i++){
     for (let j = 0; j < length; j++){
-      // If the stuff is bigger than the other stuff, switch em. 
+      // If the stuff is bigger than the other stuff, switch em.
       if (array[j] > array[j + 1]){
         swapStuff(array, j, j + 1);
         console.log(array)

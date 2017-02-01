@@ -12,13 +12,14 @@ function insertionSort(stuff) {
   if(!Array.isArray(stuff)){
     throw new Error('error')
   }
-  // Loop through the array front to front
+  // Loop through the array front to front (sorted portion)
   for(let i = 1; i < length; i++) {
-    // Define a temporary variable that holds value
+    // Define a temporary variable that holds value as it may change
     let tank = stuff[i];
-    // Loop through the stuff from i - 1 (j)
+    // Loop through the rest. the unsorted portion.
+    // Whenever the value in the sorted is greater, shift all
+    // Values in the array over by one.
     for(var j = (i - 1); j >= 0 && stuff[j] > tank; j--) {
-      // if the stuff at j + 1 is bigger than the stuff at J, switch em.
       stuff[j + 1] = stuff[j];
     }
     // Overwrite j+1 with tank value

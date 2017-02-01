@@ -13,7 +13,7 @@ function mergeStuff(stuff){
   const left       = stuff.slice(0, halfStuff);
   // make a new array from the right half
   const right      = stuff.slice(halfStuff);
-  // recursion yo. continue to split and split.
+  // recursion yo. continue to split and split until you cant split 
   return divideAndConquer(mergeStuff(left), mergeStuff(right));
 }
 
