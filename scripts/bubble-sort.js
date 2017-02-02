@@ -1,7 +1,7 @@
 
 //  Take two.
+function bubbleSort(array){
 
-const bubbleSort = array => {
   // Two for loops. dále.
   for (let i = 0; i < array.length; i++){
     for(let j = 0; j < array.length; j++){
@@ -9,14 +9,14 @@ const bubbleSort = array => {
         // define a temporary holding tank for your value.
         // without this temporary tank, one of the values will be overwritten.
         let tank = array[j];
-        array[j] = array[j + 1]
+        array[j] = array[j + 1];
         // switch em .
-        array[j + 1] = tank
-        console.log(array)
+        array[j + 1] = tank;
+        console.log(array);
       }
     }
-  } return array
-};
+  } return array;
+}
 
 
 ///  Take three
@@ -34,7 +34,7 @@ function swapStuff(items, first, second){
 function bubbleSort3(array){
   // If array is not an array chuck an error, m8.
   if(!Array.isArray(array)){
-    throw new Error('error')
+    throw new Error('error');
   }
   let length = array.length;
   // Loop through these puppies. utah, gimme 2.
@@ -45,13 +45,13 @@ function bubbleSort3(array){
       if (array[j] > array[j + 1]){
         swapStuff(array, j, j + 1);
         // visualize this going down
-        console.log(array)
+        console.log(array);
       }
     }
-  } return array
+  } return array;
 }
 
 // bubbleSort3([10,1,3,2,11,6,4,5,8,9,])
 
 
-export default bubbleSort3
+export default bubbleSort3;
