@@ -2,8 +2,13 @@ const a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
 
 function mergeStuff(stuff){
   // Find the length of the array
+  // visualize whats going down with the recursive splitting:
+  console.log("splitting" + stuff)
+
   const length = stuff.length;
+  
   // if length is one, it is considered sorted. woo.
+  // the recusion bottoms out when the sequence has length 1
   if(length < 2) {
     return stuff;
   }
@@ -13,7 +18,11 @@ function mergeStuff(stuff){
   const left       = stuff.slice(0, halfStuff);
   // make a new array from the right half
   const right      = stuff.slice(halfStuff);
-  // recursion yo. continue to split and split until you cant split 
+  // recursion yo. continue to split sort and split and sort until you cant
+  // at each level of recusion we do the following:
+  // divide the problem into a number of subproblems (splits)
+  // sort the two arrays recursively using divideAndConquer
+  // merge the two sorted subsequences.
   return divideAndConquer(mergeStuff(left), mergeStuff(right));
 }
 
@@ -26,7 +35,10 @@ function divideAndConquer(left, right){
 
   // while indexes are smaller than their length
   while(leftIndex < left.length && rightIndex < right.length){
+    // visualize whats going down with the recursive merging:
+    console.log("merging " + finished)
     // current elements
+
     const elementA = left[leftIndex];
     const elementB = right[rightIndex];
 
