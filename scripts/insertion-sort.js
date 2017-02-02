@@ -12,8 +12,8 @@ function insertionSort(stuff) {
   if(!Array.isArray(stuff)){
     throw new Error('error')
   }
-  // Loop through the array front to front (sorted portion)
-  // Assume the first element is already sorted 
+  // Loop through the array
+  // Assume the first element is already sorted
   for(let i = 1; i < length; i++) {
     // Define a temporary variable that holds value as it may change
     let tank = stuff[i];
@@ -25,6 +25,7 @@ function insertionSort(stuff) {
     }
     // Overwrite j+1 with tank value
     stuff[j + 1] = tank;
+    // visualize this happening
     console.log(stuff)
   }
   return stuff
