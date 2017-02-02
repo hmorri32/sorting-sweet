@@ -13,6 +13,7 @@ function insertionSort(stuff) {
     throw new Error('error')
   }
   // Loop through the array front to front (sorted portion)
+  // Assume the first element is already sorted 
   for(let i = 1; i < length; i++) {
     // Define a temporary variable that holds value as it may change
     let tank = stuff[i];
