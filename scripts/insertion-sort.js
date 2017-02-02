@@ -17,9 +17,8 @@ function insertionSort(stuff) {
     // Define a temporary variable that holds value as it may change
     // This refers to the element you are examining in each iteration
     let tank = stuff[i];
+    
     // Loop through the unsorted portion back to front.
-    //
-    //
     for(var j = (i - 1); j >= 0 && stuff[j] > tank; j--) {
       stuff[j + 1] = stuff[j];
     }

@@ -9,9 +9,8 @@ const bubbleSort = array => {
         // define a temporary holding tank for your value.
         // without this temporary tank, one of the values will be overwritten.
         let tank = array[j];
-        // switch the values.
         array[j] = array[j + 1]
-        // switch em back.
+        // switch em .
         array[j + 1] = tank
         console.log(array)
       }
@@ -26,7 +25,7 @@ function swapStuff(items, first, second){
   // temporary variable. holding tank. hold the value as it will change later
   // Per iteration.
   // without this temporary tank, one of the values will be overwritten.
-  
+
   let tank = items[first];
   items[first] = items[second];
   items[second] = tank;
@@ -45,6 +44,7 @@ function bubbleSort3(array){
       // If the stuff is bigger than the other stuff, switch em.
       if (array[j] > array[j + 1]){
         swapStuff(array, j, j + 1);
+        // visualize this going down
         console.log(array)
       }
     }
