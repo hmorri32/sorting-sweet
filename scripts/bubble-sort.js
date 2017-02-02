@@ -24,6 +24,7 @@ const bubbleSort = array => {
 // Make helper function for that swapswap
 function swapStuff(items, first, second){
   // temporary variable. holding tank. hold the value as it will change later
+  // Per iteration. 
   // without this temporary tank, one of the values will be overwritten.
 
   let tank = items[first];
