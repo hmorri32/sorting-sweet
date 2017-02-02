@@ -4,14 +4,13 @@
 function insertionSort(stuff) {
   // Grab length of the stuff.
   const length = stuff.length;
-  // If the length of the stuff is less than 1 than throw
-  if(length < 1){
-    throw new Error('error')
-  }
+
+  // If the length of the stuff is less than 1, throw
   // if the array is not actually an array, throw
-  if(!Array.isArray(stuff)){
+  if(length === 0 || !Array.isArray(stuff)){
     throw new Error('error')
   }
+
   // Loop through the array
   // Assume the first element is already sorted
   for(let i = 1; i < length; i++) {

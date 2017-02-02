@@ -1,11 +1,17 @@
 const a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
 
 function mergeStuff(stuff){
-  // visualize whats going down with the recursive splitting:
-  console.log("splitting" + stuff)
-
   // Find the length of the array
   const length = stuff.length;
+
+  // If the length of the stuff is less than 1, error
+  // If the array is not actually an array, error
+  if(length === 0 || !Array.isArray(stuff)){
+    throw new Error('error')
+  }
+
+  // visualize whats going down with the recursive splitting:
+  console.log("splitting " + stuff)
 
   // if length is one, it is considered sorted. woo.
   // the recusion bottoms out when the sequence has length 1
@@ -57,3 +63,5 @@ function divideAndConquer(left, right){
 }
 
 // console.log(mergeStuff(a))
+
+export default mergeStuff
