@@ -16,14 +16,15 @@ function insertionSort(stuff) {
   // Assume the first element is already sorted
   for(let i = 1; i < length; i++) {
     // Define a temporary variable that holds value as it may change
+    // This refers to the element you are examining
     let tank = stuff[i];
-    // Loop through the rest. the unsorted portion.
-    // Whenever the value in the sorted is greater, shift all
-    // Values in the array over by one.
+    // Loop through the unsorted portion back to front.
+    //
+    // 
     for(var j = (i - 1); j >= 0 && stuff[j] > tank; j--) {
       stuff[j + 1] = stuff[j];
     }
-    // Overwrite j+1 with tank value
+    // Overwrite j+1 with the element you are inspecting's value
     stuff[j + 1] = tank;
     // visualize this happening
     console.log(stuff)
