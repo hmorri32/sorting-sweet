@@ -33,7 +33,7 @@ function swapStuff(items, first, second){
 
 function bubbleSort3(array){
   // If array is not an array chuck an error, m8.
-  if(!Array.isArray(array)){
+  if (!Array.isArray(array)){
     throw new Error('error');
   }
   let length = array.length;
@@ -48,8 +48,10 @@ function bubbleSort3(array){
         console.log(array);
       }
     }
+    length--;
   } return array;
 }
+
 
 // bubbleSort3([10,1,3,2,11,6,4,5,8,9,])
 

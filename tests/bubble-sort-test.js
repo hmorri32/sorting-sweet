@@ -13,9 +13,9 @@ describe('TDD with bubbles', () => {
   });
 
   it('should bubble sort numbers and return and ordered array', () => {
-    let bubbler = bubbleSort3([1, 4, 3, 2, 7]);
+    let bubbler = bubbleSort3([1, 4, 9, 3, 2, 7]);
 
-    expect(bubbler).to.deep.equal([1, 2, 3, 4, 7]);
+    expect(bubbler).to.deep.equal([1, 2, 3, 4, 7, 9]);
   });
 
   it('should also bubble sort strings and return an ordered array', () => {
